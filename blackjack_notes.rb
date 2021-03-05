@@ -1,7 +1,8 @@
 #################
 ####Blackjack####
 #################
-####
+
+
 #Classes
     #player
         #create the following accessable properties: *attr_accessor*
@@ -89,3 +90,4 @@
             #tie > puts a message to the player. nothing is affected.
         
         ##consider writing a switch case statement to cover all situations
+#goat squad
