@@ -2,6 +2,7 @@
 ####Blackjack####
 #################
 ##added my Dev branch- kellie
+## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
 #Classes
     #player
         #create the following accessable properties: *attr_accessor*
