@@ -19,7 +19,7 @@ Commands to Set up Your own repo:
 
 <h4>git status</h4>
 always good to have a check in and see where you're at
-<h4>git add</h4>
+<h4>git add -A</h4>
 stage all your changes
 <h4>git commit -m "added suits to the cards"</h4>
 after each accomplishment, commit 
