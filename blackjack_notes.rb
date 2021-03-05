@@ -1,7 +1,7 @@
 #################
 ####Blackjack####
 #################
-##
+####
 #Classes
     #player
         #create the following accessable properties: *attr_accessor*
