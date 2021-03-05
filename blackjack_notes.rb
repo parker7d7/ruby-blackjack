@@ -1,7 +1,7 @@
 #################
 ####Blackjack####
 #################
-
+##added my Dev branch- kellie
 #Classes
     #player
         #create the following accessable properties: *attr_accessor*
