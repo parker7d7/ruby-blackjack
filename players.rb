@@ -9,10 +9,10 @@ class Player
         @bankroll = bankroll
         
     end
-    # def get_cards(card)
-    #     @cards << card
-    #     @hand_total += card.value
-    #   end
+    def get_cards(card)
+        @cards << card
+        @hand_total += card.value
+      end
     
 end
 
