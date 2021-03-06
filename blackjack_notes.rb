@@ -89,7 +89,8 @@
             #tie > puts a message to the player. nothing is affected.
         
         ##consider writing a switch case statement to cover all situations
-#goat squad
 
+#joe commit test goat
+#goat squad
 
 #andrea was here!
