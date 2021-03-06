@@ -1,7 +1,8 @@
 <h2>Git Commands and Reminders for Ruby- BlackJack</h2>
 
 Our Main Repo for Ruby- BlackJack is https://github.com/andrea-hidalgo/ruby-blackjack.git
-
+FIRST THING YOU MUST DO:
+!!!Go to your personal dev repo- GIT PULL UPSTREAM DEV to make sure you have the most up to date info!!!
 Commands to Set up Your own repo: 
 
 <h4>git branch</h4>   
