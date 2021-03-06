@@ -1,6 +1,10 @@
 #################
 ####Blackjack####
 #################
+##  added by -Kevin
+
+##added my Dev branch- kellie
+
 
 #Classes
     #player
@@ -91,5 +95,4 @@
         ##consider writing a switch case statement to cover all situations
 #goat squad
 
-
-#andrea was here!
+#parkertest
