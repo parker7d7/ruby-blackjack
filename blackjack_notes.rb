@@ -4,13 +4,10 @@
 
 ##  added by -Kevin
 
-<<<<<<< HEAD
 ##  added by -Kevin
 
 ##added my Dev branch- kellie
 
-=======
->>>>>>> b7104728351ab7ee8e6e9d489beab62e3c377528
 ##  more changes
 
 ##a RANDOM CHANGE 
