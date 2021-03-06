@@ -2,8 +2,12 @@
 ####Blackjack####
 #################
 
+
 #Classes
-    #player
+    #Player
+        #main class
+
+    #Human - instance of Player class
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 100)
@@ -21,7 +25,7 @@
             end
         end
 
-    #house
+    #house - instance of Player class
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 10,000)
