@@ -5,6 +5,11 @@
 
 ##added my Dev branch- kellie
 
+##a RANDOM CHANGE 
+
+##added my Dev branch- kellie
+
+## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
 
 #Classes
     #player
@@ -93,7 +98,9 @@
             #tie > puts a message to the player. nothing is affected.
         
         ##consider writing a switch case statement to cover all situations
+
+#joe commit test goat
 #goat squad
 
-
 #parkertest
+#andrea was here!
