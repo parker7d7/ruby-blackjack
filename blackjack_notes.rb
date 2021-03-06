@@ -1,7 +1,15 @@
 #################
 ####Blackjack####
 #################
+##  added by -Kevin
+
+##  more changes
+##a RANDOM CHANGE 
+
 ##added my Dev branch- kellie
+
+## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
+
 #Classes
     #player
         #create the following accessable properties: *attr_accessor*
@@ -19,8 +27,13 @@
                 @bankroll = 100
                 @name = name
             end
+            def get_card(card)
+                @cards << card
+                @total += card.value
+              end
+            
         end
-
+        human = Player.new
     #house
         #create the following accessable properties: *attr_accessor*
         #name
@@ -90,8 +103,9 @@
         
         ##consider writing a switch case statement to cover all situations
 
-        #joe commit test goat
+#joe commit test goat
 #goat squad
 
 
 # Joe Hatz making a change
+#andrea was here!
