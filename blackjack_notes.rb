@@ -1,10 +1,15 @@
 #################
-####Blackjack####
+#### Blackjack####
 #################
+
+##  added by -Kevin
+
 ##  added by -Kevin
 
 ##  more changes
+
 ##a RANDOM CHANGE 
+
 
 ##added my Dev branch- kellie
 
