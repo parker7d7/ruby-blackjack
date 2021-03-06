@@ -1,11 +1,15 @@
 #################
 #### Blackjack####
 #################
-<<<<<<< HEAD
+
 ##  added by -Kevin
-=======
+
+##  added by -Kevin
+
+##  more changes
+
 ##a RANDOM CHANGE 
->>>>>>> upstream/dev
+
 
 ##added my Dev branch- kellie
 
@@ -28,8 +32,13 @@
                 @bankroll = 100
                 @name = name
             end
+            def get_card(card)
+                @cards << card
+                @total += card.value
+              end
+            
         end
-
+        human = Player.new
     #house
         #create the following accessable properties: *attr_accessor*
         #name
