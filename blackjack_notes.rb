@@ -4,8 +4,6 @@
 
 ##  added by -Kevin
 
-##  added by -Kevin
-
 ##  more changes
 
 ##a RANDOM CHANGE 
@@ -33,7 +31,7 @@
                 @name = name
             end
             def get_card(card)
-                @cards << card
+                # @cards << card
                 @total += card.value
               end
             
@@ -91,9 +89,31 @@
     #empty array
     class Deck
         attr_reader :deck
+        
         RANKS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
-        SUITS = ['club', 'spade', 'heart', 'diamond']
+        SUITS = ['♣', '♠', '♥', '♦']
+      
+        def initialize
+          @deck = []
+          SUITS.each do |suit|
+            RANKS.each do |rank|
+              @deck << Card.new(rank, suit)
+            end
+          end
+        end
+        def shuffle
+            @deck = @deck.shuffle
+        end
     end
+ 
+    human = Player.new
+    computer = Player.new
+    new_deck = Deck.new
+    new_deck.shuffle
+    
+p new_deck
+      
+
 
 #Gameplay
     #Player chooses their name
