@@ -37,13 +37,10 @@
               end
             
         end
-<<<<<<< HEAD
 
     #house - instance of Player class
-=======
         human = Player.new
     #house
->>>>>>> b67311f26d83a11b04a5423ecfd30cc11ea035dd
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 10,000)
