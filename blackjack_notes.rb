@@ -1,6 +1,9 @@
 #################
 ####Blackjack####
 #################
+##  added by -Kevin
+
+##  more changes
 ##a RANDOM CHANGE 
 
 ##added my Dev branch- kellie
@@ -28,9 +31,19 @@
                 @bankroll = 100
                 @name = name
             end
+            def get_card(card)
+                @cards << card
+                @total += card.value
+              end
+            
         end
+<<<<<<< HEAD
 
     #house - instance of Player class
+=======
+        human = Player.new
+    #house
+>>>>>>> b67311f26d83a11b04a5423ecfd30cc11ea035dd
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 10,000)
