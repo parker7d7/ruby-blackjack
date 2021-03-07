@@ -34,13 +34,12 @@
                 @bankroll = 100
                 @name = name
             end
-            def get_card(card)
-                # @cards << card
-                @total += card.value
+            def get_card deck
+                @cards = deck.sample(2)
               end
             
         end
-        human = Player.new
+        # human = Player.new
     #house
         #create the following accessable properties: *attr_accessor*
         #name
@@ -115,12 +114,16 @@
     human = Player.new
     computer = Player.new
     new_deck = Deck.new
-
+    # p new_deck.deck
+    computer.get_card new_deck.deck
+    human.get_card new_deck.deck
+    p human 
+    p computer
     # randomized the deck we created using shuffle method
     new_deck.shuffle
     
     # prints the new fully shuffled deck that was created
-p new_deck
+# p new_deck
       
 
 
@@ -128,6 +131,7 @@ p new_deck
     #Player chooses their name
         #creates a new player class
     #Game start 
+
         #method: *deal* two random cards generated for house and player
             #sample method (grabs random items from array)
         #method: *add_cards* adds the two randomly generated cards for house and player
