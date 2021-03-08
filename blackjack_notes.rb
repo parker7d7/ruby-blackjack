@@ -137,8 +137,8 @@
         #method: *add_cards* adds the two randomly generated cards for house and player
         #method: *compare* compare the total of cards generated for house and player
        #create a cardnumber for player and computer. Then puts a value for the player and the computer based on the cardnumber that they get
-    humanTotal = human.cards.reduce(0){|sum, card| sum + card.value} 
-    computerTotal = computer.cards.reduce(0){|sum, card| sum + card.value} 
+    #humanTotal = human.cards.reduce(0){|sum, card| sum + card.value} 
+   # computerTotal = computer.cards.reduce(0){|sum, card| sum + card.value} 
     #now compare computer total and human total using if statements for different scenarios. Ex: If humantotal > 21 the human loses
       
         ##consider writing a switch case statement to cover all situations
