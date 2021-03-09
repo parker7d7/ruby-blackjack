@@ -35,8 +35,10 @@
                 @name = name
             end
             def get_card deck
-                @cards = deck.sample(2)
-              end
+                #checks if deck array is empty, if it is, placeholder for a restart game method
+                #if deck array is full, it removes 2 cards from the deck array and assigns it to the cards property
+                deck.empty? ? ( p "No more cards, want to start another game?" ) : ( @cards = deck.shift(2) )
+            end
             
         end
         # human = Player.new
@@ -114,6 +116,7 @@
     human = Player.new
     computer = Player.new
     new_deck = Deck.new
+
     p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
@@ -124,8 +127,6 @@
     
     # prints the new fully shuffled deck that was created
 # p new_deck
-      
-
 
 #Gameplay
     #Player chooses their name
