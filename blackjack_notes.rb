@@ -110,13 +110,13 @@
     human = Player.new
     computer = Player.new
     new_deck = Deck.new
-    # p new_deck.deck
+    p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
     p human 
     p computer
     # randomized the deck we created using shuffle method
-    new_deck.shuffle
+    p new_deck.deck.size
     
     # prints the new fully shuffled deck that was created
 # p new_deck
@@ -129,12 +129,15 @@
     #Game start 
 
         #method: *deal* two random cards generated for house and player
-            #sample method (grabs random items from array)
+        # need a method to remove the cards taken so no card is taken twice 
+            #sample method (grabs random items from array) Kellie, Andrea
         #method: *add_cards* adds the two randomly generated cards for house and player
         #method: *compare* compare the total of cards generated for house and player 
+            #Allegra and Parker
         #method: *win* substracts 10 from the losing party and adds 10 to the winning party
+            ## bankroll- updating Kevin, Marsallis
             #tie > puts a message to the player. nothing is affected.
-        
+         #win Joe/
         ##consider writing a switch case statement to cover all situations
 
 #joe commit test goat
