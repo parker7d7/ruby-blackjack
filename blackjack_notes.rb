@@ -6,8 +6,13 @@
 ##a RANDOM CHANGE 
 ##added my Dev branch- kellie
 ## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
+
+
 #Classes
-    #player
+    #Player
+        #main class
+
+    #Human - instance of Player class
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 100)
@@ -24,6 +29,11 @@
             def get_card deck
                 @cards = deck.sample(2)
               end
+                #checks if deck array is empty, if it is, placeholder for a restart game method
+                #if deck array is full, it removes 2 cards from the deck array and assigns it to the cards property
+                deck.empty? ? ( p "No more cards, want to start another game?" ) : ( @cards = deck.shift(2) )
+            end
+            
         end
         # human = Player.new
     #house
@@ -100,6 +110,8 @@
     human.bankroll = 100
     computer.bankroll = 1000
     # p new_deck.deck
+
+    p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
     # p human 
@@ -107,6 +119,7 @@
     # randomized the deck we created using shuffle method
     # prints the new fully shuffled deck that was created
 # p new_deck
+
 #Gameplay
     #Player chooses their name
         #creates a new player class
@@ -132,11 +145,11 @@
 human_hand = [human.cards[0].value, human.cards[0].suit, human.cards[1].value, human.cards[1].suit]
 p "human hand is: #{human_hand}"
 card_total = human.cards[0].value += human.cards[1].value
-computer_card_total = computer.cards[0].value += computer.cards[1].value
-p card_total
+computer_card_total = computer.cards[0].value + computer.cards[1].value
+p "players total hand value is: #{card_total}"
 computer_hand = [computer.cards[0].value, computer.cards[0].suit, computer.cards[1].value, computer.cards[1].suit]
 p "computer hand is: #{computer_hand}"
-p computer_card_total
+p "computers total hand value is: #{computer_card_total}"
 if card_total > computer_card_total
     human.bankroll += 10 & computer.bankroll -= 10
     p "player wins! human bankroll is #{human.bankroll}, computer loses! computer bankroll is #{computer.bankroll}"
