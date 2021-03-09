@@ -149,7 +149,7 @@ computerTotal = computer.cards.reduce(0){|sum, card| sum + card.value}
 # Should we break this switch case up into multiple cases? 1. for winning/losing, 2. tie, 3. bust?
 # Is the syntax right here?
 
-case game_Outcome
+case outcome
 when humanTotal > computerTotal && humanTotal <= 21
     Player.bankroll += 100
     Computer.bankroll -= 100
@@ -180,4 +180,4 @@ else humanTotal > 21 && Player.bankroll < 100
     Computer.bankroll += 100
     Player.bankroll -= 100
     p 'Your out of money. Take a trip to the bank or maybe sleep this one off.'
-
+end
