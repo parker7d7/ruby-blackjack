@@ -47,12 +47,10 @@ class Card
       end
     end
   end
-<<<<<<< HEAD
+
 =======
 create_cards
  
 p deck 
  ## create a loop that makes 13 cards and pushes them into the deck
->>>>>>> 6ac9e722583ba8f4130eaff161708c371eb1dc9b
-
   

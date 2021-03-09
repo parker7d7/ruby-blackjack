@@ -162,4 +162,4 @@ if card_total == computer_card_total
     p "it was a tie! human bankroll is still #{human.bankroll} and computer bankroll is still #{computer.bankroll}"
 end
 
-### while loop to keep the game going until one player loses all their money or player quits
+### while loop to keep the game going until one player loses all their money or player quit
