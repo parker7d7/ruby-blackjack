@@ -31,7 +31,7 @@
                 @name = name
             end
             def get_card deck
-                @cards = deck.sample(2)
+                @cards = deck.shift(2)
               end
             
         end
@@ -109,14 +109,14 @@
  # spawning the classes below here
     human = Player.new
     computer = Player.new
-    new_deck = Deck.new
-    p new_deck.deck
+    # new_deck = Deck.new
+    # p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
     p human 
     p computer
     # randomized the deck we created using shuffle method
-    p new_deck.deck.size
+    p new_deck.deck.empty?
     
     # prints the new fully shuffled deck that was created
 # p new_deck
