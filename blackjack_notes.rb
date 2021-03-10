@@ -1,16 +1,10 @@
 #################
 #### Blackjack####
 #################
-
 ##  added by -Kevin
-
 ##  more changes
-
 ##a RANDOM CHANGE 
-
-
 ##added my Dev branch- kellie
-
 ## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
 
 
@@ -23,15 +17,13 @@
         #name
         #bankroll(start with 100)
         #hand (array to store cards)
-
         class Player
             attr_accessor :name, :bankroll, :total
             attr_reader :cards
-
             def start_game
                 @cards = []
                 @total = 0
-                @bankroll = 100
+                @bankroll = bankroll
                 @name = name
             end
             def get_card deck
@@ -47,7 +39,6 @@
         #name
         #bankroll(start with 10,000)
         #hand(array to store cards)
-
     #card
         #create the following readable properties: 
             #value (between 1 and 11)
@@ -89,7 +80,6 @@
                 end
             end
         end
-
 #The Deck
     #empty array
     class Deck
@@ -97,7 +87,6 @@
         # ranks/suits for each of the cards
         RANKS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
         SUITS = ['♣', '♠', '♥', '♦']
-      
         def initialize
           @deck = []
           # i create an empty array called deck and then for I create a new card and pass through a rank and suit and push them into the array
@@ -116,15 +105,16 @@
     human = Player.new
     computer = Player.new
     new_deck = Deck.new
+    human.bankroll = 100
+    computer.bankroll = 1000
+    # p new_deck.deck
 
     p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
-    p human 
-    p computer
+    # p human 
+    # p computer
     # randomized the deck we created using shuffle method
-    p new_deck.deck.size
-    
     # prints the new fully shuffled deck that was created
 # p new_deck
 
@@ -132,7 +122,6 @@
     #Player chooses their name
         #creates a new player class
     #Game start 
-
         #method: *deal* two random cards generated for house and player
         # need a method to remove the cards taken so no card is taken twice 
             #sample method (grabs random items from array) Kellie, Andrea
@@ -144,30 +133,52 @@
             #tie > puts a message to the player. nothing is affected.
          #win Joe/
         ##consider writing a switch case statement to cover all situations
-
-    #     Win/Lose Logic
-
-    # If neither sum is above 21, the player with the larger sum wins the hand
-    def check_win
-        @total !> 21
-            human.total > computer.total ? ( p "Human wins!" ) : ( p "Computer wins!" )
-        end
-    # If the sum of the card values is 21 the player automatically wins
-    def black_jack
-        if human.total == 21
-            p "Human hit 21!"
-        elsif computer.total == 21
-            p "Computer hit 21!"
-        else human.total || computer.total > 21
-            p "Busted! Over 21"
-        end
-
-    # If the sum of the cards is greater than 21 the player automatically loses
-
-
-
-
 #joe commit test goat
 #goat squad
-
 #andrea was here!
+# both_cards = [human.cards[0].value,  human.cards[1].value]
+# # p human.cards[0].value
+# # p human.cards[1].value
+# p both_cards
+human_hand = [human.cards[0].value, human.cards[0].suit, human.cards[1].value, human.cards[1].suit]
+p "human hand is: #{human_hand}"
+card_total = human.cards[0].value += human.cards[1].value
+computer_card_total = computer.cards[0].value + computer.cards[1].value
+p "players total hand value is: #{card_total}"
+computer_hand = [computer.cards[0].value, computer.cards[0].suit, computer.cards[1].value, computer.cards[1].suit]
+p "computer hand is: #{computer_hand}"
+p "computers total hand value is: #{computer_card_total}"
+if card_total > computer_card_total
+    human.bankroll += 10 & computer.bankroll -= 10
+    p "player wins! human bankroll is #{human.bankroll}, computer loses! computer bankroll is #{computer.bankroll}"
+end
+if computer_card_total > card_total
+    computer.bankroll += 10 & human.bankroll -= 10
+    p "player loses! human bankroll is #{human.bankroll}, computer wins! computer bankroll is #{computer.bankroll}"
+end
+if card_total == computer_card_total
+    p "it was a tie! human bankroll is still #{human.bankroll} and computer bankroll is still #{computer.bankroll}"
+end
+
+### while loop to keep the game going until one player loses all their money or player quit
+
+# a = 0
+# while a < 5 do
+# 	p a
+# 	a+=1 //++ does not exist. must do +=1 or another increment number
+# end
+
+def game_loop
+    while bankroll > 10
+        #Game goes down
+        #chomp!!!
+
+#         def game_loop
+# get name
+# get cards
+# compare totals
+# run again
+# end
+# game_loop
+
+end
