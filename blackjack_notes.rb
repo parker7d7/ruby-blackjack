@@ -116,7 +116,7 @@
     new_deck.shuffle
     
     # prints the new fully shuffled deck that was created
-p new_deck
+p json: new_deck
       
 
 
