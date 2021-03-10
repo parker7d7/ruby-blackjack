@@ -145,5 +145,12 @@
          #win Joe/
         ##consider writing a switch case statement to cover all situations
 
+# def game_play
+#     #getname()
+#     #get cards()
+#     #play()
+#     #comparisons()
+# end
 
+# game_play 
 
