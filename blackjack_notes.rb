@@ -13,8 +13,12 @@
 
 ## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
 
+
 #Classes
-    #player
+    #Player
+        #main class
+
+    #Human - instance of Player class
         #create the following accessable properties: *attr_accessor*
         #name
         #bankroll(start with 100)
@@ -31,8 +35,10 @@
                 @name = name
             end
             def get_card deck
-                @cards = deck.sample(2)
-              end
+                #checks if deck array is empty, if it is, placeholder for a restart game method
+                #if deck array is full, it removes 2 cards from the deck array and assigns it to the cards property
+                deck.empty? ? ( p "No more cards, want to start another game?" ) : ( @cards = deck.shift(2) )
+            end
             
         end
         # human = Player.new
@@ -110,18 +116,17 @@
     human = Player.new
     computer = Player.new
     new_deck = Deck.new
-    # p new_deck.deck
+
+    p new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
     p human 
     p computer
     # randomized the deck we created using shuffle method
-    new_deck.shuffle
+    p new_deck.deck.size
     
     # prints the new fully shuffled deck that was created
 # p new_deck
-      
-
 
 #Gameplay
     #Player chooses their name
@@ -129,12 +134,15 @@
     #Game start 
 
         #method: *deal* two random cards generated for house and player
-            #sample method (grabs random items from array)
+        # need a method to remove the cards taken so no card is taken twice 
+            #sample method (grabs random items from array) Kellie, Andrea
         #method: *add_cards* adds the two randomly generated cards for house and player
         #method: *compare* compare the total of cards generated for house and player 
+            #Allegra and Parker
         #method: *win* substracts 10 from the losing party and adds 10 to the winning party
+            ## bankroll- updating Kevin, Marsallis
             #tie > puts a message to the player. nothing is affected.
-        
+         #win Joe/
         ##consider writing a switch case statement to cover all situations
 
 
