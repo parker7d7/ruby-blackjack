@@ -116,13 +116,7 @@
     # p computer
     # randomized the deck we created using shuffle method
     # prints the new fully shuffled deck that was created
-<<<<<<< HEAD
-p json: new_deck
-      
-
-=======
 # p new_deck
->>>>>>> b387f89bcc2355eae088806ef82f169a5b166e99
 
 #Gameplay
     #Player chooses their name
@@ -141,12 +135,6 @@ p json: new_deck
         ##consider writing a switch case statement to cover all situations
 #joe commit test goat
 #goat squad
-<<<<<<< HEAD
-
-
-# Joe Hatz making a change
-=======
->>>>>>> b387f89bcc2355eae088806ef82f169a5b166e99
 #andrea was here!
 # both_cards = [human.cards[0].value,  human.cards[1].value]
 # # p human.cards[0].value
