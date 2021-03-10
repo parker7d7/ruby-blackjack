@@ -1,11 +1,13 @@
-#################
-#### Blackjack####
-#################
-##  added by -Kevin
-##  more changes
-##a RANDOM CHANGE 
-##added my Dev branch- kellie
-## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
+# function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
+
+def get_name 
+    puts "Welcome to Ruby Blackjack. What's your name?"
+    @playername = gets.chomp.capitalize
+    puts "Hi #{@playername}, do you want to play (Y/N)?"
+    @game_loop = gets.chomp.upcase
+end
+
+get_name 
 
 
 #Classes
@@ -109,7 +111,7 @@
     computer.bankroll = 1000
     # p new_deck.deck
 
-    p new_deck.deck
+    new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
     # p human 
