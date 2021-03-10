@@ -145,6 +145,28 @@
          #win Joe/
         ##consider writing a switch case statement to cover all situations
 
+    #     Win/Lose Logic
+
+    # If neither sum is above 21, the player with the larger sum wins the hand
+    def check_win
+        @total !> 21
+            human.total > computer.total ? ( p "Human wins!" ) : ( p "Computer wins!" )
+        end
+    # If the sum of the card values is 21 the player automatically wins
+    def black_jack
+        if human.total == 21
+            p "Human hit 21!"
+        elsif computer.total == 21
+            p "Computer hit 21!"
+        else human.total || computer.total > 21
+            p "Busted! Over 21"
+        end
+
+    # If the sum of the cards is greater than 21 the player automatically loses
+
+
+
+
 #joe commit test goat
 #goat squad
 
