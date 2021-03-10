@@ -27,8 +27,6 @@
                 @name = name
             end
             def get_card deck
-                @cards = deck.sample(2)
-              end
                 #checks if deck array is empty, if it is, placeholder for a restart game method
                 #if deck array is full, it removes 2 cards from the deck array and assigns it to the cards property
                 deck.empty? ? ( p "No more cards, want to start another game?" ) : ( @cards = deck.shift(2) )
