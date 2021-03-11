@@ -1,17 +1,3 @@
-#################
-#### Blackjack####
-#################
-
-##  added by -Kevin
-
-##  more changes
-
-##a RANDOM CHANGE 
-
-
-##added my Dev branch- kellie
-
-## MORE PRACTICE ADDING MY OWN DEV BRANCH- ONLY FOR WORKING ON MY MACHINE
 
 
 #Classes
@@ -28,10 +14,10 @@
             attr_accessor :name, :bankroll, :total
             attr_reader :cards
 
-            def start_game
+            def player_start
                 @cards = []
                 @total = 0
-                @bankroll = 100
+                @bankroll = bankroll
                 @name = name
             end
             def get_card deck
@@ -113,17 +99,19 @@
         end
     end
  # spawning the classes below here
-    human = Player.new
-    computer = Player.new
-    new_deck = Deck.new
+    # human = Player.new
+    # computer = Player.new
+    # new_deck = Deck.new
 
-    p new_deck.deck
-    computer.get_card new_deck.deck
-    human.get_card new_deck.deck
-    p human 
-    p computer
-    # randomized the deck we created using shuffle method
-    p new_deck.deck.size
+    
+
+    # new_deck.deck
+    # computer.get_card new_deck.deck
+    # human.get_card new_deck.deck
+    # p human 
+    # p computer
+    # # randomized the deck we created using shuffle method
+    # p new_deck.deck.size
     
     # prints the new fully shuffled deck that was created
 # p new_deck
@@ -147,11 +135,24 @@
 
 
 
+
+
+### while loop to keep the game going until one player loses all their money or player quit
+
+# a = 0
+# while a < 5 do
+# 	p a
+# 	a+=1 //++ does not exist. must do +=1 or another increment number
+# end
+
 # The over all game loop that calls on all other functions
 
-def game_loop player_name
-    human = Player.new
+def game_start playername 
+    human = Player.new 
+    human.name = playername
+    human.bankroll = 100
     computer = Player.new
+    computer.bankroll = 1000
     new_deck = Deck.new
     p human
     p computer
@@ -161,5 +162,20 @@ def game_loop player_name
     end
 end
 
+# function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
+
+def get_name 
+    puts "Welcome to Ruby Blackjack. What's your name?"
+    @playername = gets.chomp.capitalize
+    puts "Hi #{@playername}, do you want to play (Y/N)?"
+    @game_loop = gets.chomp.upcase
+    if @game_loop == "Y"
+        game_start @playername
+    else
+        puts "No game for you"
+    end   
+end
+
+get_name 
 
 
