@@ -1,13 +1,4 @@
-# function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
 
-def get_name 
-    puts "Welcome to Ruby Blackjack. What's your name?"
-    @playername = gets.chomp.capitalize
-    puts "Hi #{@playername}, do you want to play (Y/N)?"
-    @game_loop = gets.chomp.upcase
-end
-
-get_name 
 
 
 #Classes
@@ -111,6 +102,8 @@ get_name
     computer.bankroll = 1000
     # p new_deck.deck
 
+    
+
     new_deck.deck
     computer.get_card new_deck.deck
     human.get_card new_deck.deck
@@ -163,3 +156,36 @@ if card_total == computer_card_total
 end
 
 ### while loop to keep the game going until one player loses all their money or player quit
+
+# a = 0
+# while a < 5 do
+# 	p a
+# 	a+=1 //++ does not exist. must do +=1 or another increment number
+# end
+
+# function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
+
+def get_name 
+    puts "Welcome to Ruby Blackjack. What's your name?"
+    @playername = gets.chomp.capitalize
+    puts "Hi #{@playername}, do you want to play (Y/N)?"
+    @game_loop = gets.chomp.upcase
+    if @game_loop == "Y"
+        game_start @playername
+    else
+        puts "No game for you"
+        
+end
+
+get_name 
+
+def game_start player_name
+    while bankroll > 10
+        
+# get cards
+# compare totals
+# run again
+# end
+# game_loop
+
+end
