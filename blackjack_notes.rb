@@ -20,7 +20,7 @@
                 @bankroll = bankroll
                 @name = name
             end
-            def get_card dec
+            def get_card deck
                 #checks if deck array is empty, if it is, placeholder for a restart game method
                 #if deck array is full, it removes 2 cards from the deck array and assigns it to the cards property
                 deck.empty? ? ( p "No more cards, want to start another game?" ) : ( @cards = deck.shift(2) )
@@ -150,8 +150,33 @@
 # 	p a
 # 	a+=1 //++ does not exist. must do +=1 or another increment number
 # end
-
+def gameplay human, computer
+    new_deck = Deck.new
+    new_deck.shuffle
+    human.get_card new_deck.deck
+    computer.get_card new_deck.deck
+    human_hand = [human.cards[0].value, human.cards[0].suit, human.cards[1].value, human.cards[1].suit]
+    p "human hand is: #{human_hand}"
+    card_total = human.cards[0].value += human.cards[1].value
+    computer_card_total = computer.cards[0].value + computer.cards[1].value
+    p "players total hand value is: #{card_total}"
+    computer_hand = [computer.cards[0].value, computer.cards[0].suit, computer.cards[1].value, computer.cards[1].suit]
+    p "computer hand is: #{computer_hand}"
+    p "computers total hand value is: #{computer_card_total}"
+    if card_total > computer_card_total
+        human.bankroll += 10 & computer.bankroll -= 10
+        p "player wins! human bankroll is #{human.bankroll}, computer loses! computer bankroll is #{computer.bankroll}"
+    end
+    if computer_card_total > card_total
+        computer.bankroll += 10 & human.bankroll -= 10
+        p "player loses! human bankroll is #{human.bankroll}, computer wins! computer bankroll is #{computer.bankroll}"
+    end
+    if card_total == computer_card_total
+        p "it was a tie! human bankroll is still #{human.bankroll} and computer bankroll is still #{computer.bankroll}"
+    end
+end
 # The over all game loop that calls on all other functions
+
 
 def game_start playername 
     human = Player.new 
@@ -159,13 +184,19 @@ def game_start playername
     human.bankroll = 100
     computer = Player.new
     computer.bankroll = 1000
-    new_deck = Deck.new
+    
+   
+
     p human
     p computer
-    while Player.bankroll >= 10 do
-    @get_card
+    gameplay human, computer 
+  
+    # while Player.bankroll >= 10 do
+    # @get_card
 
-    end
+
+
+    # end
 end
 
 # function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
