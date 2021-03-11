@@ -145,13 +145,21 @@
          #win Joe/
         ##consider writing a switch case statement to cover all situations
 
-# def game_play
-#     #getname()
-#     #get cards()
-#     #play()
-#     #comparisons()
-# end
 
-# game_play 
-# test
+
+# The over all game loop that calls on all other functions
+
+def game_loop player_name
+    human = Player.new
+    computer = Player.new
+    new_deck = Deck.new
+    p human
+    p computer
+    while Player.bankroll >= 10 do
+    @get_card
+
+    end
+end
+
+
 
